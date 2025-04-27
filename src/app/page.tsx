@@ -64,7 +64,7 @@ export default function Home() {
             {/* Right Content - Staircase Shape */}
             <div className="flex-1 relative">
               {/* Airplane Image */}
-              <div className="absolute -right-8 md:-right-16 top-1/2 transform -translate-y-1/2 z-20 w-[300px] md:w-[450px] transition-all duration-700 hover:translate-x-2 animate-float">
+              <div className="absolute -right-8 md:-right-16 top-1/2 transform -translate-y-1/2 z-20 w-[300px] md:w-[700px] transition-all duration-700 hover:translate-x-2 animate-float">
                 <Image 
                   src="/removemax.png" 
                   alt="Airplane" 
@@ -227,7 +227,7 @@ export default function Home() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto overflow-hidden">
           {/* Card 1 */}
-          <div className="group relative bg-white rounded-2xl p-8 shadow-md hover:shadow-lg transition-all duration-300 transform-gpu hover:scale-105 overflow-hidden isolate">
+          <div className="group relative bg-gray-100 rounded-2xl p-8 shadow-md hover:shadow-lg transition-all duration-300 transform-gpu hover:scale-105 overflow-hidden isolate">
             <div className="relative z-10">
               <div className="w-14 h-14 flex items-center justify-center bg-sky-50 rounded-full mb-6">
                 <Image 
@@ -267,7 +267,7 @@ export default function Home() {
           </div>
 
           {/* Card 2 */}
-          <div className="group relative bg-white rounded-2xl p-8 shadow-md hover:shadow-lg transition-all duration-300 transform-gpu hover:scale-105 overflow-hidden isolate">
+          <div className="group relative bg-gray-100 rounded-2xl p-8 shadow-md hover:shadow-lg transition-all duration-300 transform-gpu hover:scale-105 overflow-hidden isolate">
             <div className="relative z-10">
               <div className="w-14 h-14 flex items-center justify-center bg-sky-50 rounded-full mb-6">
                 <Image 
@@ -307,7 +307,7 @@ export default function Home() {
           </div>
 
           {/* Card 3 */}
-          <div className="group relative bg-white rounded-2xl p-8 shadow-md hover:shadow-lg transition-all duration-300 transform-gpu hover:scale-105 overflow-hidden isolate">
+          <div className="group relative bg-gray-100 rounded-2xl p-8 shadow-md hover:shadow-lg transition-all duration-300 transform-gpu hover:scale-105 overflow-hidden isolate">
             <div className="relative z-10">
               <div className="w-14 h-14 flex items-center justify-center bg-sky-50 rounded-full mb-6">
                 <Image 
@@ -346,6 +346,95 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Premium Unleash Wanderlust Section */}
+      <div className="px-6 md:px-12 py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col md:flex-row items-center gap-12">
+            {/* Left Side - Image and Promo */}
+            <div className="flex relative">
+              <div className="relative rounded-3xl overflow-hidden shadow-xl h-[500px] w-[400px]">
+                <Image
+                  src="/destinations/img1.jpg"
+                  alt="Premium Travel Experience"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+              </div>
+              
+              {/* Promo Badge 
+              <div className="absolute bottom-8 left-8 flex items-center gap-4">
+                <div className="text-4xl font-extrabold text-white">20% OFF</div>
+                <div className="text-sm font-medium text-white/80">
+                  Till 28 April, <br /> 2025
+                </div>
+              </div>*/}
+            </div>
+            
+             {/* Right Side - Text Content */}
+            <div className="flex-1 flex flex-col justify-center h-[500px] gap-7">
+              {/* First Heading Block */}
+              <div className="flex flex-row space-x-7">
+                <h2 className="text-7xl md:text-7xl font-extrabold tracking-tight text-gray-900">UNLEASH</h2>
+                <p className="text-gray-600 text-[15px] mt-4 leading-relaxed max-w-xl">
+                  Traveling is a wonderful way to explore new places, learn about different cultures, and gain unique experiences.
+                </p>
+              </div>
+              
+              {/* Second Heading Block */}
+              <div className="flex flex-col gap-6">
+                <h2 className="text-5xl md:text-7xl font-extrabold tracking-tight text-gray-900">WANDERLUST WITH</h2>
+                <div className="flex flex-row">
+                  <p className="text-gray-600 text-[15px] mt-4 leading-relaxed max-w-90">
+                    Traveling is a wonderful way to explore new places, 
+                    learn about different cultures,
+                  </p>
+                  <h2 className="text-5xl md:text-7xl font-extrabold tracking-tight text-gray-900">SKYWINGS</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div className="flex flex-row">
+          {/* Promo Badge */}
+          <div className="flex items-center gap-4">
+            <div className="text-4xl font-extrabold text-black">20% OFF</div>
+              <div className="text-sm font-medium text-black/80">
+                    Till 28 April, <br /> 2025
+              </div>
+          </div>
+
+
+          {/* CTA Button */}
+            <div className="mt-4">
+                  <div className="relative overflow-hidden rounded-2xl group cursor-pointer">
+                    <div className="relative bg-sky-500 px-8 py-6 flex items-center justify-between z-10 group-hover:bg-sky-600 transition-colors duration-300">
+                      <span className="text-xl font-bold text-white">Book a flight now</span>
+                      <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center group-hover:bg-white/30 transition-colors duration-300">
+                        <Image 
+                          src="/arrow.svg" 
+                          alt="Arrow" 
+                          width={20} 
+                          height={20}
+                          className="text-white" 
+                        />
+                      </div>
+                    </div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-sky-400 to-sky-600 opacity-80 z-0">
+                      <Image
+                        src="/cloud.jpg"
+                        alt="Background Pattern"
+                        fill
+                        className="object-cover opacity-20 mix-blend-overlay"
+                      />
+                    </div>
+                  </div>
+              </div>
+          </div>
+        
       </div>
     </main>
   );
