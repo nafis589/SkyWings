@@ -1,103 +1,352 @@
-import Image from "next/image";
+import Image from 'next/image';
+import { Twitter, Facebook, Instagram, Linkedin } from 'lucide-react';
+import { FaAirbnb } from 'react-icons/fa';
+import { SiTrivago, SiExpedia } from 'react-icons/si';
+import { FaLocationDot } from "react-icons/fa6";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <main className="min-h-screen bg-white">
+      {/* Navbar */}
+      <nav className="flex items-center justify-between px-6 md:px-12 py-6">
+        <div className="flex items-center gap-70">
+          <h1 className="text-2xl font-bold">UIXSHUVO</h1>
+          <div className="hidden md:flex items-center gap-8">
+            <a href="#" className="text-sm font-medium hover:text-sky-500 transition-colors">ABOUT</a>
+            <a href="#" className="text-sm font-medium hover:text-sky-500 transition-colors">TOUR</a>
+            <a href="#" className="text-sm font-medium hover:text-sky-500 transition-colors">PACKAGE</a>
+            <a href="#" className="text-sm font-medium hover:text-sky-500 transition-colors">CONTACT</a>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        <button className="bg-black text-white px-6 py-2 rounded-md text-sm font-medium hover:bg-gray-800 transition-colors">
+          Book Trip
+        </button>
+      </nav>
+
+      {/* Hero Section */}
+      <div className="px-6 md:px-12 py-8">
+        <div className="relative w-full rounded-tl-3xl rounded-tr-3xl rounded-bl-3xl rounded-br-3xl overflow-hidden bg-sky-50 shadow-sm">
+          {/* Background Image */}
+          <div className="absolute inset-0 z-0">
+            <Image 
+              src="/cloud.jpg" 
+              alt="Background Pattern" 
+              fill 
+              className="object-cover"
+            />
+          </div>
+
+          <div className="relative z-10 flex flex-col md:flex-row min-h-[500px]">
+            {/* Left Content */}
+            <div className="flex-1 p-8 md:p-16 flex flex-col justify-center">
+              <div className="relative">
+                <div className="absolute -left-2 -top-2 w-12 h-12 bg-sky-100 rounded-full opacity-50"></div>
+                <p className="text-sm md:text-base text-gray-600 mb-2 relative z-10 tracking-wider font-medium">ELEVATE YOUR TRAVEL JOURNEY</p>
+              </div>
+              <h2 className="text-3xl md:text-5xl font-bold mb-8 leading-tight">Experience the <span className="text-sky-500">magic</span> of flight!</h2>
+              
+              <div className="flex items-center gap-6 mt-4">
+                <button className="bg-sky-400 hover:bg-sky-500 text-white px-8 py-3 rounded-full text-sm font-medium transition-colors shadow-md hover:shadow-lg">
+                  Book a trip now
+                </button>
+                <button className="w-14 h-14 flex items-center justify-center bg-white rounded-full shadow-md hover:shadow-lg transition-all hover:scale-105">
+                  <Image 
+                    src="/play.svg" 
+                    alt="Play" 
+                    width={24} 
+                    height={24} 
+                    className="text-sky-500"
+                  />
+                </button>
+              </div>
+            </div>
+
+            {/* Right Content - Staircase Shape */}
+            <div className="flex-1 relative">
+              {/* Airplane Image */}
+              <div className="absolute -right-8 md:-right-16 top-1/2 transform -translate-y-1/2 z-20 w-[300px] md:w-[450px] transition-all duration-700 hover:translate-x-2 animate-float">
+                <Image 
+                  src="/removemax.png" 
+                  alt="Airplane" 
+                  width={3620} 
+                  height={2758} 
+                  className="object-contain drop-shadow-xl"
+                />
+              </div>
+              
+              <div className="absolute bottom-0 right-0 w-full md:w-1/2 h-1/3 bg-gradient-to-br from-gray-200 to-white rounded-tl-3xl p-6 flex flex-col justify-between shadow-lg">
+                {/* Cloud Shape */}
+                {/*<div className="absolute -top-3 -left-5 w-24 h-12 bg-white rounded-full before:content-[''] before:absolute before:-top-4 before:-left-4 before:w-16 before:h-16 before:bg-white before:rounded-full after:content-[''] after:absolute after:-top-2 after:left-8 after:w-14 after:h-14 after:bg-white after:rounded-full"></div>*/}
+                
+                <div className="flex flex-col md:flex-row items-center md:items-start md:justify-between w-full gap-6">
+                  <div className="text-center md:text-left md:flex-1 md:ml-4">
+                    <h3 className="font-bold text-xl md:text-2xl mb-2">Awesome place</h3>
+                    <p className="text-sm md:text-base text-gray-600">Discover the world One Adventure At a Time</p>
+                    
+                    <button className="mt-4 bg-gray-100 px-4 py-2 rounded-lg flex items-center gap-2 text-sm font-medium hover:text-sky-500 transition-colors group mx-auto md:mx-0">
+                      Know more
+                      <span className="group-hover:translate-x-1 transition-transform">
+                        <Image 
+                          src="/arrow.svg" 
+                          alt="Arrow" 
+                          width={16} 
+                          height={16} 
+                          className="text-current"
+                        />
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Social Media Section */}
+      <div className="px-6 md:px-12 mt-8">
+        <div className="w-full bg-white rounded-2xl shadow-sm p-6 flex items-center justify-between">
+          <div className="flex items-center gap-8">
+            <span className="text-sm font-semibold uppercase tracking-wide">Follow</span>
+            <div className="flex items-center gap-6">
+              <a
+                href="#"
+                className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-50 hover:bg-sky-50 shadow-sm hover:shadow transition-all hover:scale-105"
+              >
+                <Twitter size={20} className="text-gray-700" />
+              </a>
+              <a
+                href="#"
+                className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-50 hover:bg-sky-50 shadow-sm hover:shadow transition-all hover:scale-105"
+              >
+                <Facebook size={20} className="text-gray-700" />
+              </a>
+              <a
+                href="#"
+                className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-50 hover:bg-sky-50 shadow-sm hover:shadow transition-all hover:scale-105"
+              >
+                <Instagram size={20} className="text-gray-700" />
+              </a>
+              <a
+                href="#"
+                className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-50 hover:bg-sky-50 shadow-sm hover:shadow transition-all hover:scale-105"
+              >
+                <Linkedin size={20} className="text-gray-700" />
+              </a>
+            </div>
+          </div>
+
+          {/* Travel Platforms */}
+          <div className="hidden md:flex flex-1 items-center justify-center">
+            <div className="flex space-x-13 items-center gap-8">
+              <a href="#" className="flex items-center gap-3 text-gray-600 hover:text-sky-500 transition-colors">
+                <FaAirbnb size={40} />
+                <span className="text-lg font-medium">Airbnb</span>
+              </a>
+              <a href="#" className="flex items-center gap-3 text-gray-600 hover:text-sky-500 transition-colors">
+                <span className="text-lg font-medium">Booking.com</span>
+              </a>
+              <a href="#" className="flex items-center gap-3 text-gray-600 hover:text-sky-500 transition-colors">
+                <SiTrivago size={40} />
+                <span className="text-lg font-medium">Trivago</span>
+              </a>
+              <a href="#" className="flex items-center gap-3 text-gray-600 hover:text-sky-500 transition-colors">
+                <SiExpedia size={40} />
+                <span className="text-lg font-medium">Expedia</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Popular Destinations Section */}
+      <div className="px-6 md:px-12 py-16 bg-gradient-to-br from-white to-white">
+        <div className="flex items-center justify-between mb-8">
+          <div>
+            <h2 className="text-3xl font-bold mb-2">Popular Destination</h2>
+            <p className="text-gray-600">Unleash Your Wanderlust With Skywings</p>
+          </div>
+          <div className="flex items-center gap-4">
+            <button className="w-12 h-12 flex items-center justify-center rounded-full bg-white shadow-md hover:shadow-lg transition-all hover:scale-105">
+              <Image 
+                src="/arrow.svg" 
+                alt="Previous" 
+                width={20} 
+                height={20} 
+                className="transform rotate-180" 
+              />
+            </button>
+            <button className="w-12 h-12 flex items-center justify-center rounded-full bg-white shadow-md hover:shadow-lg transition-all hover:scale-105">
+              <Image 
+                src="/arrow.svg" 
+                alt="Next" 
+                width={20} 
+                height={20} 
+              />
+            </button>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {[1, 2, 3].map((index) => (
+            <div key={index} className="bg-white rounded-2xl overflow-hidden transition-all hover:-translate-y-1">
+              <div className="relative h-48 overflow-hidden rounded-b-2xl">
+                <Image
+                  src={`/destinations/img${index}.jpg`}
+                  alt={`Destination ${index}`}
+                  fill
+                  className="object-cover transition-transform hover:scale-105"
+                />
+              </div>
+              <div className="p-6">
+                <div className="flex items-center justify-between mb-4">
+                  <h3 className="text-xl font-bold">Forest Wild Life</h3>
+                  <span className="px-3 py-1 bg-sky-100 text-sky-600 rounded-full flex items-center gap-1 text-sm font-medium">
+                    <span>⭐</span>
+                    4.7
+                  </span>
+                </div>
+                <div className="flex items-center gap-2 text-gray-600">
+                  <FaLocationDot />
+                  <span>NRT, Indonesia</span>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Journey Made Simple Section */}
+      <div className="px-6 md:px-12 py-16 bg-white">
+        <div className="flex flex-col items-center justify-center mb-12 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Journey To the Skies Made Simple!</h2>
+          <p className="text-gray-600 max-w-[700px] mx-auto leading-relaxed">
+            Traveling is a wonderful way to explore new places, learn about different cultures, and gain unique experiences.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto overflow-hidden">
+          {/* Card 1 */}
+          <div className="group relative bg-white rounded-2xl p-8 shadow-md hover:shadow-lg transition-all duration-300 transform-gpu hover:scale-105 overflow-hidden isolate">
+            <div className="relative z-10">
+              <div className="w-14 h-14 flex items-center justify-center bg-sky-50 rounded-full mb-6">
+                <Image 
+                  src="/location.svg" 
+                  alt="Location" 
+                  width={28} 
+                  height={28} 
+                  className="text-sky-500" 
+                />
+              </div>
+              <h3 className="text-xl font-bold mb-2 group-hover:text-white transition-colors duration-300">Find your destination</h3>
+              <div className="h-0 opacity-0 group-hover:h-auto group-hover:opacity-100 transition-all duration-300 overflow-hidden mb-4">
+                <p className="text-sm text-gray-600 group-hover:text-white/90 transition-colors duration-300">
+                  Discover amazing destinations around the world and find the perfect place for your next adventure.
+                </p>
+              </div>
+              <div className="flex items-center justify-end mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <span className="uppercase text-xs font-semibold tracking-wider group-hover:text-white transition-colors duration-300">Learn more</span>
+                <Image 
+                  src="/arrow-right.svg" 
+                  alt="Arrow" 
+                  width={16} 
+                  height={16} 
+                  className="ml-2 text-white" 
+                />
+              </div>
+            </div>
+            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="absolute inset-0 bg-sky-500/80 z-0"></div>
+              <Image 
+                src="/destinations/img1.jpg" 
+                alt="Destination Background" 
+                fill 
+                className="object-cover z-[-1] transition-transform duration-500 group-hover:scale-110" 
+              />
+            </div>
+          </div>
+
+          {/* Card 2 */}
+          <div className="group relative bg-white rounded-2xl p-8 shadow-md hover:shadow-lg transition-all duration-300 transform-gpu hover:scale-105 overflow-hidden isolate">
+            <div className="relative z-10">
+              <div className="w-14 h-14 flex items-center justify-center bg-sky-50 rounded-full mb-6">
+                <Image 
+                  src="/ticket.svg" 
+                  alt="Ticket" 
+                  width={28} 
+                  height={28} 
+                  className="text-sky-500" 
+                />
+              </div>
+              <h3 className="text-xl font-bold mb-2 group-hover:text-white transition-colors duration-300">Book a ticket</h3>
+              <div className="h-0 opacity-0 group-hover:h-auto group-hover:opacity-100 transition-all duration-300 overflow-hidden mb-4">
+                <p className="text-sm text-gray-600 group-hover:text-white/90 transition-colors duration-300">
+                  Secure your flight with our easy booking system and get the best deals for your travel plans.
+                </p>
+              </div>
+              <div className="flex items-center justify-end mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <span className="uppercase text-xs font-semibold tracking-wider group-hover:text-white transition-colors duration-300">Learn more</span>
+                <Image 
+                  src="/arrow-right.svg" 
+                  alt="Arrow" 
+                  width={16} 
+                  height={16} 
+                  className="ml-2 text-white" 
+                />
+              </div>
+            </div>
+            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="absolute inset-0 bg-sky-500/80 z-0"></div>
+              <Image 
+                src="/destinations/img2.jpg" 
+                alt="Booking Background" 
+                fill 
+                className="object-cover z-[-1] transition-transform duration-500 group-hover:scale-110" 
+              />
+            </div>
+          </div>
+
+          {/* Card 3 */}
+          <div className="group relative bg-white rounded-2xl p-8 shadow-md hover:shadow-lg transition-all duration-300 transform-gpu hover:scale-105 overflow-hidden isolate">
+            <div className="relative z-10">
+              <div className="w-14 h-14 flex items-center justify-center bg-sky-50 rounded-full mb-6">
+                <Image 
+                  src="/wallet.svg" 
+                  alt="Wallet" 
+                  width={28} 
+                  height={28} 
+                  className="text-sky-500" 
+                />
+              </div>
+              <h3 className="text-xl font-bold mb-2 group-hover:text-white transition-colors duration-300">Pay & start journey</h3>
+              <div className="h-0 opacity-0 group-hover:h-auto group-hover:opacity-100 transition-all duration-300 overflow-hidden mb-4">
+                <p className="text-sm text-gray-600 group-hover:text-white/90 transition-colors duration-300">
+                  Complete your payment securely and get ready to embark on an unforgettable journey.
+                </p>
+              </div>
+              <div className="flex items-center justify-end mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <span className="uppercase text-xs font-semibold tracking-wider group-hover:text-white transition-colors duration-300">Learn more</span>
+                <Image 
+                  src="/arrow-right.svg" 
+                  alt="Arrow" 
+                  width={16} 
+                  height={16} 
+                  className="ml-2 text-white" 
+                />
+              </div>
+            </div>
+            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="absolute inset-0 bg-sky-500/80 z-0"></div>
+              <Image 
+                src="/destinations/img3.jpg" 
+                alt="Payment Background" 
+                fill 
+                className="object-cover z-[-1] transition-transform duration-500 group-hover:scale-110" 
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
   );
 }
