@@ -217,7 +217,7 @@ export default function Home() {
       </div>
 
       {/* Journey Made Simple Section */}
-      <div className="px-6 md:px-12 py-16 bg-white border-2 h-[500px]">
+      <div className="px-6 md:px-12 py-16 bg-white h-[500px]">
         <div className="flex flex-col items-center justify-center mb-12 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Journey To the Skies Made Simple!</h2>
           <p className="text-gray-600 max-w-[700px] mx-auto leading-relaxed">
@@ -225,9 +225,9 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto border-2">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {/* Card 1 */}
-                <div className="group relative bg-gray-100 rounded-2xl p-8 shadow-md hover:shadow-lg transition-all duration-300 ease-linear transform-gpu hover:scale-105 overflow-hidden isolate">
+                <div className="group relative bg-gray-100 h-[280px] rounded-2xl p-8 hover:shadow-lg transition-all duration-300 ease-linear transform-gpu hover:scale-105 overflow-hidden isolate">
                   <div className="relative z-10">
                     <div className="w-14 h-14 flex items-center justify-center bg-sky-50 rounded-full mb-6">
                       <Image 
@@ -268,7 +268,7 @@ export default function Home() {
                 
 
           {/* Card 2 */}
-          <div className="group relative bg-gray-100 rounded-2xl p-8 shadow-md hover:shadow-lg transition-all duration-300 transform-gpu hover:scale-105 overflow-hidden isolate">
+          <div className="group relative bg-gray-100 rounded-2xl h-[280px] p-8 hover:shadow-lg transition-all duration-300 transform-gpu hover:scale-105 overflow-hidden isolate">
             <div className="relative z-10">
               <div className="w-14 h-14 flex items-center justify-center bg-sky-50 rounded-full mb-6">
                 <Image 
@@ -308,7 +308,7 @@ export default function Home() {
           </div>
 
           {/* Card 3 */}
-          <div className="group relative bg-gray-100 rounded-2xl p-8 shadow-md hover:shadow-lg transition-all duration-300 transform-gpu hover:scale-105 overflow-hidden isolate">
+          <div className="group relative bg-gray-100 rounded-2xl h-[280px] p-8 hover:shadow-lg transition-all duration-300 transform-gpu hover:scale-105 overflow-hidden isolate">
             <div className="relative z-10">
               <div className="w-14 h-14 flex items-center justify-center bg-sky-50 rounded-full mb-6">
                 <Image 
@@ -355,7 +355,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row items-center gap-12">
             {/* Left Side - Image and Promo */}
             <div className="flex relative">
-              <div className="relative rounded-3xl overflow-hidden shadow-xl h-[500px] w-[400px]">
+              <div className="relative rounded-3xl overflow-hidden shadow-xl h-[500px] w-[350px]">
                 <Image
                   src="/destinations/img1.jpg"
                   alt="Premium Travel Experience"
@@ -437,6 +437,55 @@ export default function Home() {
           </div>
         
       </div>
+
+       {/* About Us Section */}
+       <div className="px-6 md:px-12 py-16 bg-white">
+          <div className="max-w-7xl mx-auto">
+            {/* Label + Intro Text */}
+            <div className="flex flex-col md:flex-row items-center justify-between gap-8 mb-12">
+              <div className="bg-sky-100 text-sky-600 p-6 ml-30 rounded-full text-xl font-medium inline-block">
+                About Us
+              </div>
+              <div className="md:max-w-[60%]">
+                <p className="text-xl leading-relaxed font-bold">
+                  At Skywings, we&apos;re passionate about connecting people to their dream destinations. With over a decade of experience in the travel industry, we&apos;ve helped thousands of travelers experience the magic of flight and discover new horizons.
+                </p>
+              </div>
+            </div>
+
+            {/* Info Boxes */}
+            <div className="flex flex-row mb-12 pl-[500px]">
+              <div className="bg-white pl-7 border-l-4 border-sky-400 transition-shadow w-[350px] h-[]">
+                <h3 className="text-xm font-bold mb-3">Our Mission</h3>
+                <p className="text-gray-600">
+                  To provide exceptional travel experiences that inspire wanderlust and create lasting memories, while ensuring safety, comfort, and affordability for all our customers.
+                </p>
+              </div>
+              <div className="bg-white pl-7 border-l-4 border-sky-400 transition-shadow w-[350px]">
+                <h3 className="text-xm font-bold mb-3">Our Vision</h3>
+                <p className="text-gray-600">
+                  To become the world&apos;s most trusted travel companion, revolutionizing how people explore the globe through innovative solutions and personalized service.
+                </p>
+              </div>
+            </div>
+
+            {/* Metric Cards */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="bg-gray-50 px-7 py-25 rounded-[100px] hover:shadow-md transition-shadow text-center">
+                <div className="text-8xl font-medium text-sky-500 mb-2">10+</div>
+                <div className="font-medium">Years of Experience</div>
+              </div>
+              <div className="bg-gray-50 px-7 py-25 rounded-[100px] hover:shadow-md transition-shadow text-center">
+                <div className="text-8xl font-medium text-sky-500 mb-2">12K</div>
+                <div className="font-medium">Happy Travelers</div>
+              </div>
+              <div className="bg-gray-50 px-7 py-25 rounded-[100px] hover:shadow-md transition-shadow text-center">
+                <div className="text-8xl font-medium text-sky-500 mb-2">4.8</div>
+                <div className="font-medium">Overall Ratings</div>
+              </div>
+            </div>
+          </div>
+        </div>
     </main>
   );
 }
