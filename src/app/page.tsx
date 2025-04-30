@@ -64,7 +64,7 @@ export default function Home() {
             {/* Right Content - Staircase Shape */}
             <div className="flex-1 relative">
               {/* Airplane Image */}
-              <div className="absolute -right-8 md:-right-16 top-1/2 transform -translate-y-1/2 z-20 w-[300px] md:w-[700px] transition-all duration-700 hover:translate-x-2 animate-float">
+              <div className="absolute -right-8 md:-right-16 top-1/2 transform -translate-y-1/2 z-0 w-[300px] md:w-[700px] transition-all duration-700 hover:translate-x-2 animate-float">
                 <Image 
                   src="/removemax.png" 
                   alt="Airplane" 
@@ -217,7 +217,7 @@ export default function Home() {
       </div>
 
       {/* Journey Made Simple Section */}
-      <div className="px-6 md:px-12 py-16 bg-white">
+      <div className="px-6 md:px-12 py-16 bg-white border-2 h-[500px]">
         <div className="flex flex-col items-center justify-center mb-12 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Journey To the Skies Made Simple!</h2>
           <p className="text-gray-600 max-w-[700px] mx-auto leading-relaxed">
@@ -225,46 +225,47 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto overflow-hidden">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto border-2">
           {/* Card 1 */}
-          <div className="group relative bg-gray-100 rounded-2xl p-8 shadow-md hover:shadow-lg transition-all duration-300 transform-gpu hover:scale-105 overflow-hidden isolate">
-            <div className="relative z-10">
-              <div className="w-14 h-14 flex items-center justify-center bg-sky-50 rounded-full mb-6">
-                <Image 
-                  src="/location.svg" 
-                  alt="Location" 
-                  width={28} 
-                  height={28} 
-                  className="text-sky-500" 
-                />
-              </div>
-              <h3 className="text-xl font-bold mb-2 group-hover:text-white transition-colors duration-300">Find your destination</h3>
-              <div className="h-0 opacity-0 group-hover:h-auto group-hover:opacity-100 transition-all duration-300 overflow-hidden mb-4">
-                <p className="text-sm text-gray-600 group-hover:text-white/90 transition-colors duration-300">
-                  Discover amazing destinations around the world and find the perfect place for your next adventure.
-                </p>
-              </div>
-              <div className="flex items-center justify-end mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <span className="uppercase text-xs font-semibold tracking-wider group-hover:text-white transition-colors duration-300">Learn more</span>
-                <Image 
-                  src="/arrow-right.svg" 
-                  alt="Arrow" 
-                  width={16} 
-                  height={16} 
-                  className="ml-2 text-white" 
-                />
-              </div>
-            </div>
-            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <div className="absolute inset-0 bg-sky-500/80 z-0"></div>
-              <Image 
-                src="/destinations/img1.jpg" 
-                alt="Destination Background" 
-                fill 
-                className="object-cover z-[-1] transition-transform duration-500 group-hover:scale-110" 
-              />
-            </div>
-          </div>
+                <div className="group relative bg-gray-100 rounded-2xl p-8 shadow-md hover:shadow-lg transition-all duration-300 ease-linear transform-gpu hover:scale-105 overflow-hidden isolate">
+                  <div className="relative z-10">
+                    <div className="w-14 h-14 flex items-center justify-center bg-sky-50 rounded-full mb-6">
+                      <Image 
+                        src="/location.svg" 
+                        alt="Location" 
+                        width={28} 
+                        height={28} 
+                        className="text-sky-500" 
+                      />
+                    </div>
+                    <h3 className="text-xl font-bold mb-2 group-hover:text-white transition-colors duration-300">Find your destination</h3>
+                    <div className="h-0 opacity-0 group-hover:h-auto group-hover:opacity-100 transition-all duration-300 overflow-hidden mb-4">
+                      <p className="text-sm text-gray-600 group-hover:text-white/90 transition-colors duration-300">
+                        Discover amazing destinations around the word and the perfect place for your next adventure.
+                      </p>
+                    </div>
+                    <div className="flex items-center justify-end mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <span className="uppercase text-xs font-semibold tracking-wider group-hover:text-white transition-colors duration-300">Learn more</span>
+                      <Image 
+                        src="/arrow-right.svg" 
+                        alt="Arrow" 
+                        width={16} 
+                        height={16} 
+                        className="ml-2 text-white" 
+                      />
+                    </div>
+                  </div>
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="absolute inset-0 bg-sky-500/80 z-0"></div>
+                    <Image 
+                      src="/destinations/img1.jpg" 
+                      alt="Destination Background" 
+                      fill 
+                      className="object-cover z-[-1] transition-transform duration-500 group-hover:scale-110" 
+                    />
+                  </div>
+                </div>
+                
 
           {/* Card 2 */}
           <div className="group relative bg-gray-100 rounded-2xl p-8 shadow-md hover:shadow-lg transition-all duration-300 transform-gpu hover:scale-105 overflow-hidden isolate">
@@ -398,9 +399,9 @@ export default function Home() {
           </div>
         </div>
         
-        <div className="flex flex-row">
+        <div className="flex flex-row gap-30">
           {/* Promo Badge */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-5 ml-12">
             <div className="text-4xl font-extrabold text-black">20% OFF</div>
               <div className="text-sm font-medium text-black/80">
                     Till 28 April, <br /> 2025
@@ -411,7 +412,7 @@ export default function Home() {
           {/* CTA Button */}
             <div className="mt-4">
                   <div className="relative overflow-hidden rounded-2xl group cursor-pointer">
-                    <div className="relative bg-sky-500 px-8 py-6 flex items-center justify-between z-10 group-hover:bg-sky-600 transition-colors duration-300">
+                    <div className="relative bg-sky-500 px-8 py-6 flex items-center z-10 group-hover:bg-sky-600 transition-colors duration-300 w-[800px] justify-center gap-4">
                       <span className="text-xl font-bold text-white">Book a flight now</span>
                       <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center group-hover:bg-white/30 transition-colors duration-300">
                         <Image 
