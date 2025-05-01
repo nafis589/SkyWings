@@ -43,7 +43,7 @@ export default function Home() {
                 <div className="absolute -left-2 -top-2 w-12 h-12 bg-sky-100 rounded-full opacity-50"></div>
                 <p className="text-sm md:text-base text-gray-600 mb-2 relative z-10 tracking-wider font-medium">ELEVATE YOUR TRAVEL JOURNEY</p>
               </div>
-              <h2 className="text-3xl md:text-5xl font-bold mb-8 leading-tight">Experience the <span className="text-sky-500">magic</span> of flight!</h2>
+              <h2 className="text-5xl md:text-7xl font-bold mb-8 leading-tight w-[500px]">Experience the <span className="text-sky-500">magic</span> of flight!</h2>
               
               <div className="flex items-center gap-6 mt-4">
                 <button className="bg-sky-400 hover:bg-sky-500 text-white px-8 py-3 rounded-full text-sm font-medium transition-colors shadow-md hover:shadow-lg">
@@ -64,7 +64,7 @@ export default function Home() {
             {/* Right Content - Staircase Shape */}
             <div className="flex-1 relative">
               {/* Airplane Image */}
-              <div className="absolute -right-8 md:-right-16 top-1/2 transform -translate-y-1/2 z-0 w-[300px] md:w-[700px] transition-all duration-700 hover:translate-x-2 animate-float">
+              <div className="absolute -right-8 md:-right-16 top-1/2 transform -translate-y-1/2 z-0 w-[300px] md:w-[800px] transition-all duration-700 hover:translate-x-2 animate-float">
                 <Image 
                   src="/removemax.png" 
                   alt="Airplane" 
@@ -83,7 +83,7 @@ export default function Home() {
                     <h3 className="font-bold text-xl md:text-2xl mb-2">Awesome place</h3>
                     <p className="text-sm md:text-base text-gray-600">Discover the world One Adventure At a Time</p>
                     
-                    <button className="mt-4 bg-gray-100 px-4 py-2 rounded-lg flex items-center gap-2 text-sm font-medium hover:text-sky-500 transition-colors group mx-auto md:mx-0">
+                    <button className="mt-4 bg-gray-100 px-4 py-2 rounded-lg flex items-center gap-2 text-sm font-medium hover:text-sky-500 text-sky-500 transition-colors group mx-auto md:mx-0">
                       Know more
                       <span className="group-hover:translate-x-1 transition-transform">
                         <Image 
@@ -350,7 +350,7 @@ export default function Home() {
       </div>
 
       {/* Premium Unleash Wanderlust Section */}
-      <div className="px-6 md:px-12 py-20 bg-gray-50">
+      <div className="px-6 md:pl-25 py-20 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row items-center gap-12">
             {/* Left Side - Image and Promo */}
