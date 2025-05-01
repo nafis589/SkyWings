@@ -3,6 +3,7 @@ import { Twitter, Facebook, Instagram, Linkedin } from 'lucide-react';
 import { FaAirbnb } from 'react-icons/fa';
 import { SiTrivago, SiExpedia } from 'react-icons/si';
 import { FaLocationDot } from "react-icons/fa6";
+import Footer from '../components/Footer';
 
 export default function Home() {
   return (
@@ -189,8 +190,8 @@ export default function Home() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {[1, 2, 3].map((index) => (
-            <div key={index} className="bg-white rounded-2xl overflow-hidden transition-all hover:-translate-y-1">
-              <div className="relative h-48 overflow-hidden rounded-b-2xl">
+            <div key={index} className="bg-white rounded-4xl overflow-hidden transition-all hover:-translate-y-1">
+              <div className="relative h-48 overflow-hidden rounded-b-4xl">
                 <Image
                   src={`/destinations/img${index}.jpg`}
                   alt={`Destination ${index}`}
@@ -471,21 +472,239 @@ export default function Home() {
 
             {/* Metric Cards */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-gray-50 px-7 py-25 rounded-[100px] hover:shadow-md transition-shadow text-center">
+              <div className="bg-gray-50 px-7 py-25 rounded-[100px] transition-shadow text-center">
                 <div className="text-8xl font-medium text-sky-500 mb-2">10+</div>
                 <div className="font-medium">Years of Experience</div>
               </div>
-              <div className="bg-gray-50 px-7 py-25 rounded-[100px] hover:shadow-md transition-shadow text-center">
+              <div className="bg-gray-50 px-7 py-25 rounded-[100px] transition-shadow text-center">
                 <div className="text-8xl font-medium text-sky-500 mb-2">12K</div>
                 <div className="font-medium">Happy Travelers</div>
               </div>
-              <div className="bg-gray-50 px-7 py-25 rounded-[100px] hover:shadow-md transition-shadow text-center">
+              <div className="bg-gray-50 px-7 py-25 rounded-[100px] transition-shadow text-center">
                 <div className="text-8xl font-medium text-sky-500 mb-2">4.8</div>
                 <div className="font-medium">Overall Ratings</div>
               </div>
             </div>
           </div>
         </div>
+
+        {/* Discover the World from Above Section */}
+        <div className="px-6 md:px-12 py-16 bg-[#fff]">
+          <div className="max-w-7xl mx-auto">
+            {/* Section Title and Subtitle */}
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Discover the World from Above</h2>
+              <p className="text-gray-600 max-w-[700px] mx-auto leading-relaxed">
+                Traveling is a wonderful way to explore new places, learn about different cultures, and gain unique experiences.
+              </p>
+            </div>
+
+            {/* Cards Container */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              {/* Card 1 */}
+              <div className="bg-white rounded-2xl p-8 transition-all duration-300 transform-gpu hover:-translate-y-1">
+                <div className="flex justify-center mb-6">
+                  <div className="w-16 h-16 flex items-center justify-center bg-sky-50 rounded-full">
+                    <Image 
+                      src="/globe.svg" 
+                      alt="Various Destinations" 
+                      width={32} 
+                      height={32} 
+                      className="text-sky-500" 
+                    />
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold mb-3 text-center">Various Destinations</h3>
+                <p className="text-gray-600 text-center">
+                  Explore a wide range of breathtaking destinations around the world, from bustling cities to serene natural landscapes.
+                </p>
+              </div>
+
+              {/* Card 2 */}
+              <div className="bg-white rounded-2xl p-8 transition-all duration-300 transform-gpu hover:-translate-y-1">
+                <div className="flex justify-center mb-6">
+                  <div className="w-16 h-16 flex items-center justify-center bg-sky-50 rounded-full">
+                    <Image 
+                      src="/compass.svg" 
+                      alt="Guided Adventures" 
+                      width={32} 
+                      height={32} 
+                      className="text-sky-500" 
+                    />
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold mb-3 text-center">Guided Adventures</h3>
+                <p className="text-gray-600 text-center">
+                  Join our expert guides for unforgettable adventures tailored to your interests and comfort level.
+                </p>
+              </div>
+
+              {/* Card 3 */}
+              <div className="bg-white rounded-2xl p-8 transition-all duration-300 transform-gpu hover:-translate-y-1">
+                <div className="flex justify-center mb-6">
+                  <div className="w-16 h-16 flex items-center justify-center bg-sky-50 rounded-full">
+                    <Image 
+                      src="/map-pin.svg" 
+                      alt="Exclusive Experiences" 
+                      width={32} 
+                      height={32} 
+                      className="text-sky-500" 
+                    />
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold mb-3 text-center">Exclusive Experiences</h3>
+                <p className="text-gray-600 text-center">
+                  Enjoy unique, once-in-a-lifetime experiences that go beyond traditional tourism and create lasting memories.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Testimonial Section */}
+      <div className="px-6 md:px-12 py-16 bg-white">
+        <div className="max-w-7xl mx-auto">
+          {/* Section Title */}
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Loved by over thousand travelers</h2>
+          </div>
+
+          {/* Testimonials Container */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {/* Testimonial Card 1 */}
+            <div className="bg-gray-50 rounded-4xl p-1 pb-7 transition-all duration-300 transform-gpu hover:bg-sky-500 hover:-translate-y-1 relative overflow-hidden">
+              <div className="bg-white p-7 rounded-[30px]">  
+                <div className="absolute top-4 right-4 opacity-10">
+                  <Image 
+                    src="/testimonials/quote.svg" 
+                    alt="Quote" 
+                    width={48} 
+                    height={48} 
+                  />
+                </div>
+                <div className="flex mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Image 
+                      key={i}
+                      src="/testimonials/star.svg" 
+                      alt="Star" 
+                      width={20} 
+                      height={20} 
+                    />
+                  ))}
+                </div>
+                <p className="text-gray-700 mb-6 relative z-10">
+                  &quot;The flight booking experience was seamless! The website was intuitive and I found the perfect flight within minutes. Will definitely use this service again for my future travels.&quot;
+                </p>
+              </div>  
+
+
+              <div className="flex items-center mt-6">
+                <div className="w-12 h-12 rounded-full overflow-hidden mr-4 ml-10 ">
+                  <Image 
+                    src="/testimonials/profile1.svg" 
+                    alt="Sarah Johnson" 
+                    width={48} 
+                    height={48} 
+                  />
+                </div>
+                <div>
+                  <h4 className="font-bold text-gray-900">Sarah Johnson</h4>
+                  <p className="text-sm text-gray-600">Travel Blogger</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Testimonial Card 2 */}
+            <div className="bg-gray-50 rounded-4xl p-1 transition-all duration-300 transform-gpu hover:bg-sky-500 hover:-translate-y-1 relative overflow-hidden">
+              <div className="bg-white p-7 rounded-[30px]">  
+                <div className="absolute top-4 right-4 opacity-10">
+                  <Image 
+                    src="/testimonials/quote.svg" 
+                    alt="Quote" 
+                    width={48} 
+                    height={48} 
+                  />
+                </div>
+                <div className="flex mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Image 
+                      key={i}
+                      src="/testimonials/star.svg" 
+                      alt="Star" 
+                      width={20} 
+                      height={20} 
+                    />
+                  ))}
+                </div>
+                <p className="text-gray-700 mb-6 relative z-10">
+                  &quot;I&apos;ve been using Skywings for all my business trips. Their customer service is exceptional, and they always find me the best deals. The mobile app is a game-changer for frequent travelers.&quot;
+                </p>
+              </div>  
+
+              <div className="flex items-center mt-6">
+                <div className="w-12 h-12 rounded-full overflow-hidden mr-4 ml-10">
+                  <Image 
+                    src="/testimonials/profile2.svg" 
+                    alt="Michael Chen" 
+                    width={48} 
+                    height={48} 
+                  />
+                </div>
+                <div>
+                  <h4 className="font-bold text-gray-900">Michael Chen</h4>
+                  <p className="text-sm text-gray-600">Business Executive</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Testimonial Card 3 */}
+            <div className="bg-gray-50 rounded-4xl p-1 transition-all duration-300 transform-gpu hover:bg-sky-500 hover:-translate-y-1 relative overflow-hidden">
+              <div className="bg-white p-7 rounded-[30px]"> 
+                <div className="absolute top-4 right-4 opacity-10">
+                  <Image 
+                    src="/testimonials/quote.svg" 
+                    alt="Quote" 
+                    width={48} 
+                    height={48} 
+                  />
+                </div>
+                <div className="flex mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Image 
+                      key={i}
+                      src="/testimonials/star.svg" 
+                      alt="Star" 
+                      width={20} 
+                      height={20} 
+                    />
+                  ))}
+                </div>
+                <p className="text-gray-700 mb-6 relative z-10">
+                  &quot;As a family of five, finding affordable flights can be challenging. Skywings made it easy with their family package options. The kids loved the in-flight entertainment, and we saved a ton!&quot;
+                </p>
+              </div>  
+
+              <div className="flex items-center mt-6">
+                <div className="w-12 h-12 rounded-full overflow-hidden mr-4 ml-10">
+                  <Image 
+                    src="/testimonials/profile3.svg" 
+                    alt="Emily Rodriguez" 
+                    width={48} 
+                    height={48} 
+                  />
+                </div>
+                <div>
+                  <h4 className="font-bold text-gray-900">Emily Rodriguez</h4>
+                  <p className="text-sm text-gray-600">Family Traveler</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* Footer */}
+      <Footer />
     </main>
   );
 }
