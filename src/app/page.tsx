@@ -181,7 +181,7 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {[1, 2, 3].map((index) => (
             <div key={index} className="bg-white rounded-4xl overflow-hidden transition-all hover:-translate-y-1">
-              <div className="relative h-48 overflow-hidden rounded-b-4xl">
+              <div className="relative h-50 overflow-hidden rounded-b-4xl">
                 <Image
                   src={`/destinations/img${index}.jpg`}
                   alt={`Destination ${index}`}
@@ -348,7 +348,7 @@ export default function Home() {
             <div className="flex relative">
               <div className="relative rounded-3xl overflow-hidden shadow-xl h-[500px] w-[350px]">
                 <Image
-                  src="/destinations/img1.jpg"
+                  src="/bg-w.jpg"
                   alt="Premium Travel Experience"
                   fill
                   className="object-cover"
@@ -390,10 +390,10 @@ export default function Home() {
           </div>
         </div>
         
-        <div className="flex flex-row gap-30">
+        <div className="flex flex-row gap-18">
           {/* Promo Badge */}
           <div className="flex items-center gap-5 ml-12">
-            <div className="text-4xl font-extrabold text-black">20% OFF</div>
+            <div className="text-4xl font-extrabold text-sky-500">20% OFF</div>
               <div className="text-sm font-medium text-black/80">
                     Till 28 April, <br /> 2025
               </div>
@@ -403,8 +403,8 @@ export default function Home() {
           {/* CTA Button */}
             <div className="mt-4">
                   <div className="relative overflow-hidden rounded-2xl group cursor-pointer">
-                    <div className="relative bg-sky-500 px-8 py-6 flex items-center z-10 group-hover:bg-sky-600 transition-colors duration-300 w-[800px] justify-center gap-4">
-                      <span className="text-xl font-bold text-white">Book a flight now</span>
+                    <div className="relative px-8 py-6 flex items-center z-10 transition-colors duration-300 w-[800px] justify-center gap-4">
+                      <span className="text-xl font-bold text-black">Book a flight now</span>
                       <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center group-hover:bg-white/30 transition-colors duration-300">
                         <Image 
                           src="/arrow.svg" 
@@ -415,7 +415,7 @@ export default function Home() {
                         />
                       </div>
                     </div>
-                    <div className="absolute inset-0 bg-gradient-to-r from-sky-400 to-sky-600 opacity-80 z-0">
+                    <div className="absolute inset-0 opacity-80 z-0">
                       <Image
                         src="/cloud.jpg"
                         alt="Background Pattern"
