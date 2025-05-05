@@ -12,10 +12,10 @@ const PopularSection = () => {
             <p className="text-xs sm:text-sm md:text-base text-gray-600">Unleash Your Wanderlust With Skywings</p>
           </div>
           <div className="flex items-center gap-2 sm:gap-3 md:gap-4">
-            <button className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full bg-white shadow-sm hover:bg-black hover:text-white transition-all hover:scale-105">
+            <button className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full bg-white hover:bg-black hover:text-white transition-all hover:scale-105">
               <IoIosArrowBack size={16} className="sm:text-lg md:text-xl" />
             </button>
-            <button className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full bg-white shadow-sm hover:bg-black hover:text-white transition-all hover:scale-105">
+            <button className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full bg-white hover:bg-black hover:text-white transition-all hover:scale-105">
               <IoIosArrowForward size={16} className="sm:text-lg md:text-xl" />
             </button>
           </div>
