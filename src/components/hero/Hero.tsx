@@ -57,7 +57,7 @@ const Hero = () => {
               
               <div className="sm:block absolute bottom-0 right-0 w-[400px] h-1/3 rounded-tl-3xl p-4 sm:p-6 flex flex-col justify-between z-50">
                 {/* Background Image */}
-                <div className="absolute inset-0 z-0 overflow-hidden rounded-tl-3xl w-[465px]">
+                <div className="absolute inset-0 z-0 overflow-hidden rounded-tl-3xl w-[470px]">
                   <Image 
                     src="/Untitled.svg" 
                     alt="Background Pattern" 
