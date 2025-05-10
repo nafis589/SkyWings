@@ -4,7 +4,7 @@ const Explore = () => {
   return (
     <div className="px-4 sm:px-6 md:px-12 py-8 sm:py-12 md:py-16 bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:flex md:flex-row items-center justify-between gap-6 md:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:flex md:flex-row items-center justify-between gap-6 md:gap-8 fle">
             {/* Left Circular Image */}
             <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 rounded-full overflow-hidden bg-gray-200 flex-shrink-0 shadow-md mx-auto sm:mx-0">
               <Image

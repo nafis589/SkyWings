@@ -1,0 +1,54 @@
+@media (max-width: 640px) {
+    .only-mobile{
+        position: absolute;
+        
+        top: 15px;
+        display: none;
+        
+        
+    }
+
+    .mobile-only{
+        display: flex;
+    }
+
+    .hero-mobile{
+        height: 250px;
+    }
+
+    .airmobile{
+        
+        width: 400px;
+        z-index: 700;
+    }
+
+    .mobile{
+        display: flex;
+        flex-direction: row;
+    }
+    .mobile-c{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .iv{
+        display: none;
+    }
+}
+@media (max-width: 1024px) {
+
+    .iv{
+        display: none;
+    }
+
+    .tab{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .fle{
+        display: flex;
+        flex-direction: column;
+    }
+    
+}

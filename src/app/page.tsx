@@ -1,4 +1,4 @@
-
+import '@/styles/Query.css';
 import Navbar from '@/components/navbar/Navbar';
 import Hero from '@/components/hero/Hero';
 import Social from '@/components/social/Social';

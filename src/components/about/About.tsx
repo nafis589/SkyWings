@@ -17,7 +17,7 @@ const About = () => {
             </div>
 
             {/* Info Boxes */}
-            <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 mb-8 sm:mb-10 md:mb-12 pl-0 sm:pl-4 md:pl-85">
+            <div className="iv flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 mb-8 sm:mb-10 md:mb-12 pl-0 sm:pl-4 md:pl-85">
               <div className="bg-white pl-4 sm:pl-5 md:pl-7 border-l-4 border-sky-400 transition-shadow w-full sm:w-[350px] mb-4 sm:mb-0">
                 <h3 className="text-sm sm:text-base font-bold mb-2 sm:mb-3">Our Mission</h3>
                 <p className="text-xs sm:text-sm md:text-base text-gray-600">
