@@ -2,6 +2,7 @@
 import { motion, useAnimation } from 'framer-motion';
 import { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
+import "@/styles/Query.css"
 
 const HeroAnimatedText = () => {
   const controls = useAnimation();
@@ -60,7 +61,7 @@ const HeroAnimatedText = () => {
   return (
     <div
       ref={ref}
-      className="flex-1 flex flex-col justify-center h-auto md:h-[400px] lg:h-[500px] gap-4 sm:gap-6 md:gap-7 mt-6 md:mt-0"
+      className="flex-1 flex flex-col justify-center h-auto md:h-[400px] lg:h-[500px] gap-4 sm:gap-6 md:gap-7 mt-6 md:mt-0 wsm"
     >
       {/* First Heading Block */}
       <div className="flex flex-col sm:flex-row space-y-3 md:space-x-7 mobile">
@@ -73,20 +74,20 @@ const HeroAnimatedText = () => {
         >
           UNLEASH
         </motion.h2>
-
+        
         <motion.p
-          className="text-gray-600 text-xs sm:text-sm md:text-[15px] mt-0 sm:mt-2 md:mt-4 leading-relaxed max-w-full sm:max-w-xl text-center sm:text-left w-full sm:w-auto md:w-[350px]"
+          className="text-gray-600 text-xs sm:text-sm md:text-[15px] mt-0 sm:mt-2 md:mt-4 leading-relaxed max-w-full sm:max-w-xl text-center sm:text-left w-full sm:w-auto md:w-[350px] smText"
           custom={1}
           initial="hidden"
           animate={controls}
           variants={paragraphVariant}
         >
-          Traveling is a wonderful way to explore new places, learn about different cultures, and gain unique experiences.
+          Traveling is a wonderful way to explore new places, learn about different cultures, and gain unique
         </motion.p>
       </div>
 
       {/* Second Heading Block */}
-      <div className="flex flex-col gap-3 sm:gap-4 md:gap-6">
+      <div className="flex flex-col gap-3 sm:gap-4 md:gap-9">
         <motion.h2
           className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-extrabold tracking-tight text-gray-900 text-center sm:text-left"
           custom={2}
@@ -99,7 +100,7 @@ const HeroAnimatedText = () => {
 
         <div className="flex flex-col sm:flex-row items-center sm:items-start gap-3 sm:gap-4 mobile-c">
           <motion.p
-            className="text-gray-600 text-xs sm:text-sm md:text-[15px] mt-0 sm:mt-2 md:mt-4 leading-relaxed max-w-full sm:max-w-[150px] md:max-w-[200px] lg:max-w-[300px] text-center sm:text-left"
+            className="text-gray-600 text-xs sm:text-sm md:text-[15px] mt-0 sm:mt-2 md:mt-4 leading-relaxed max-w-full sm:max-w-[150px] md:max-w-[200px] lg:max-w-[300px] text-center sm:text-left smTextt"
             custom={3}
             initial="hidden"
             animate={controls}

@@ -35,6 +35,24 @@
         display: none;
     }
 }
+@media (max-width: 768px) {
+    .smText{
+        
+        text-align: justify;
+        padding-left: 10px;
+        
+    }
+    .smTextt{
+        text-align: justify;
+        padding-top: 10px;
+    }
+    .wsm{
+        width: 300px;
+    }
+    .cm{
+        display: flex;
+    }
+}
 @media (max-width: 1024px) {
 
     .iv{

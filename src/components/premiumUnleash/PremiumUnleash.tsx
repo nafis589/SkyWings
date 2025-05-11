@@ -34,6 +34,14 @@ const PremiumUnleash: React.FC = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
               </div>
             </motion.div>
+
+            {/* Promo Badge */}
+          <div className="hidden items-center justify-center sm:justify-start gap-3 sm:gap-4 md:gap-5 sm:ml-0 md:ml-20 cm">
+            <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold text-sky-500">20% OFF</div>
+              <div className="text-xs sm:text-sm font-medium text-black/80">
+                    Till 28 April, <br /> 2025
+              </div>
+          </div>
             
             {/* Right Side - Text Content */}
             <HeroAnimatedText />
@@ -42,7 +50,7 @@ const PremiumUnleash: React.FC = () => {
         
         <div className="tab flex flex-col sm:flex-row gap-6 sm:gap-10 md:gap-25 mt-8 sm:mt-4">
           {/* Promo Badge */}
-          <div className="flex items-center justify-center sm:justify-start gap-3 sm:gap-4 md:gap-5 sm:ml-0 md:ml-20">
+          <div className="flex items-center justify-center sm:justify-start gap-3 sm:gap-4 md:gap-5 sm:ml-0 md:ml-20 iv">
             <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold text-sky-500">20% OFF</div>
               <div className="text-xs sm:text-sm font-medium text-black/80">
                     Till 28 April, <br /> 2025

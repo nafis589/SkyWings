@@ -1,19 +1,55 @@
+"use client";
 import React from 'react'
 import Image from 'next/image';
+import { motion } from "framer-motion"
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import { fadeUpBlur } from '@/utils/scrollAnimationVariants';
+import { useInView } from "react-intersection-observer";
 
-const Testimonial = () => {
+const cardVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: i * 0.2,
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  }),
+};
+
+const Testimonial: React.FC = () => {
+  const [ref, inView] = useInView({ triggerOnce: false, threshold: 0.15 });
+  const [fadeRef, fadeControls] = useScrollAnimation({ triggerOnce: false, threshold: 0.5 });
   return (
     <div className="px-4 sm:px-6 md:px-12 py-8 sm:py-12 md:py-16 bg-white">
         <div className="max-w-7xl mx-auto">
           {/* Section Title */}
-          <div className="text-center mb-6 sm:mb-8 md:mb-12">
+          <motion.div 
+            ref={fadeRef}
+            animate={fadeControls}
+            initial="hidden"
+            variants={fadeUpBlur}
+            className="text-center mb-6 sm:mb-8 md:mb-12"
+          >
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-4">Loved by over thousand travelers</h2>
-          </div>
+          </motion.div>
 
           {/* Testimonials Container */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 max-w-6xl mx-auto">
+          <div ref={ref} className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 max-w-6xl mx-auto">
             {/* Testimonial Card 1 */}
-            <div className="bg-gray-50 rounded-2xl sm:rounded-3xl md:rounded-4xl p-1 pb-4 sm:pb-6 md:pb-7 transition-all duration-300 transform-gpu hover:bg-sky-500 hover:-translate-y-1 relative overflow-hidden">
+            <motion.div 
+              initial="hidden"
+              animate={inView ? "visible" : "hidden"}
+              variants={cardVariants}
+              whileHover={{
+                y: -8,
+                scale: 1.03,
+                transition: { type: "spring", stiffness: 300, damping: 20 },
+              }} 
+              className="bg-gray-50 rounded-2xl sm:rounded-3xl md:rounded-4xl p-1 pb-4 sm:pb-6 md:pb-7 transition-all duration-300 transform-gpu hover:bg-sky-500 hover:-translate-y-1 relative overflow-hidden"
+            >
               <div className="bg-white p-4 sm:p-5 md:p-7 rounded-xl sm:rounded-2xl md:rounded-[30px]">  
                 <div className="absolute top-2 sm:top-3 md:top-4 right-2 sm:right-3 md:right-4 opacity-10">
                   <Image 
@@ -57,10 +93,20 @@ const Testimonial = () => {
                   <p className="text-xs sm:text-sm text-gray-600">Travel Blogger</p>
                 </div>
               </div>
-            </div>
+            </motion.div>
 
             {/* Testimonial Card 2 */}
-            <div className="bg-gray-50 rounded-2xl sm:rounded-3xl md:rounded-4xl p-1 pb-4 sm:pb-6 md:pb-7 transition-all duration-300 transform-gpu hover:bg-sky-500 hover:-translate-y-1 relative overflow-hidden">
+            <motion.div 
+              initial="hidden"
+              animate={inView ? "visible" : "hidden"}
+              variants={cardVariants}
+              whileHover={{
+                y: -8,
+                scale: 1.03,
+                transition: { type: "spring", stiffness: 300, damping: 20 },
+              }} 
+              className="bg-gray-50 rounded-2xl sm:rounded-3xl md:rounded-4xl p-1 pb-4 sm:pb-6 md:pb-7 transition-all duration-300 transform-gpu hover:bg-sky-500 hover:-translate-y-1 relative overflow-hidden"
+            >
               <div className="bg-white p-4 sm:p-5 md:p-7 rounded-xl sm:rounded-2xl md:rounded-[30px]">  
                 <div className="absolute top-2 sm:top-3 md:top-4 right-2 sm:right-3 md:right-4 opacity-10">
                   <Image 
@@ -103,10 +149,20 @@ const Testimonial = () => {
                   <p className="text-xs sm:text-sm text-gray-600">Business Executive</p>
                 </div>
               </div>
-            </div>
+            </motion.div>
 
             {/* Testimonial Card 3 */}
-            <div className="bg-gray-50 rounded-2xl sm:rounded-3xl md:rounded-4xl p-1 pb-4 sm:pb-6 md:pb-7 transition-all duration-300 transform-gpu hover:bg-sky-500 hover:-translate-y-1 relative overflow-hidden sm:col-span-2 md:col-span-1 sm:max-w-md sm:mx-auto md:max-w-none md:mx-0 w-full">
+            <motion.div 
+              initial="hidden"
+              animate={inView ? "visible" : "hidden"}
+              variants={cardVariants}
+              whileHover={{
+                y: -8,
+                scale: 1.03,
+                transition: { type: "spring", stiffness: 300, damping: 20 },
+              }} 
+              className="bg-gray-50 rounded-2xl sm:rounded-3xl md:rounded-4xl p-1 pb-4 sm:pb-6 md:pb-7 transition-all duration-300 transform-gpu hover:bg-sky-500 hover:-translate-y-1 relative overflow-hidden sm:col-span-2 md:col-span-1 sm:max-w-md sm:mx-auto md:max-w-none md:mx-0 w-full"
+            >
               <div className="bg-white p-4 sm:p-5 md:p-7 rounded-xl sm:rounded-2xl md:rounded-[30px]"> 
                 <div className="absolute top-2 sm:top-3 md:top-4 right-2 sm:right-3 md:right-4 opacity-10">
                   <Image 
@@ -149,7 +205,7 @@ const Testimonial = () => {
                   <p className="text-xs sm:text-sm text-gray-600">Family Traveler</p>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
           
           {/* Pagination dots for mobile */}
