@@ -41,16 +41,16 @@ const About: React.FC = () => {
         </div>
 
         {/* Info Boxes */}
-        <div className="flex flex-col sm:flex-row gap-6 mb-8 sm:mb-10 md:mb-12 pl-0 sm:pl-4 md:pl-[425px]">
+        <div className="amobb flex flex-col sm:flex-row gap-6 mb-8 sm:mb-10 md:mb-12 pl-0 sm:pl-4 md:pl-[425px]">
           <div className="w-full sm:w-1/2 bg-white pl-4 sm:pl-6 md:pl-8 border-l-4 border-sky-400 md:w-[400px]">
             <h3 className="text-sm sm:text-base font-bold mb-2 sm:mb-3">Our Mission</h3>
-            <p className="text-xs sm:text-sm md:text-base text-gray-600">
+            <p className="amob text-xs sm:text-sm md:text-base text-gray-600">
               To provide exceptional travel experiences that inspire wanderlust and create lasting memories, while ensuring safety, comfort, and affordability for all our customers.
             </p>
           </div>
           <div className="w-full sm:w-1/2 bg-white pl-4 sm:pl-6 md:pl-8 border-l-4 border-sky-400 md:w-[400px]">
             <h3 className="text-sm sm:text-base font-bold mb-2 sm:mb-3">Our Vision</h3>
-            <p className="text-xs sm:text-sm md:text-base text-gray-600">
+            <p className="amob text-xs sm:text-sm md:text-base text-gray-600">
               To become the world&apos;s most trusted travel companion, revolutionizing how people explore the globe through innovative solutions and personalized service.
             </p>
           </div>

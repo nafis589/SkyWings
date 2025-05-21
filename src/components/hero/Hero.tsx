@@ -30,62 +30,6 @@ const Hero: React.FC = () => {
 
   return (
     <div className="px-4 sm:px-6 md:px-12 py-6 sm:py-8 md:py-0">
-        <div className="mobile-only hidden">
-          {/* Left Content */}
-          <motion.div 
-            className="flex-1 p-6 sm:p-8 lg:p-16 flex flex-col justify-center text-center sm:text-left order-2 sm:order-1"
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
-          >
-              <motion.div className="relative" variants={itemVariants}>
-                <motion.div 
-                  className="absolute -left-2 -top-2 w-10 sm:w-12 h-10 sm:h-12 bg-sky-100 rounded-full opacity-50"
-                  animate={{ scale: [1, 1.1, 1] }}
-                  transition={{ duration: 2, repeat: Infinity }}
-                />
-                <p className="text-xs sm:text-sm md:text-base text-gray-600 mb-2 relative z-10 tracking-wider font-medium">ELEVATE YOUR TRAVEL JOURNEY</p>
-              </motion.div>
-              <motion.h2 
-                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl font-bold mb-4 sm:mb-8 leading-tight w-full sm:w-[500px] mx-auto sm:mx-0"
-                variants={itemVariants}
-              >
-                Experience the <motion.span 
-                  className="text-sky-500"
-                  animate={{ 
-                    textShadow: ["0 0 0px rgba(14, 165, 233, 0)", "0 0 20px rgba(14, 165, 233, 0.5)", "0 0 0px rgba(14, 165, 233, 0)"],
-                  }}
-                  transition={{ duration: 2, repeat: Infinity }}
-                >magic</motion.span> of flight!
-              </motion.h2>
-              
-              <motion.div 
-                className="flex items-center justify-center sm:justify-start gap-4 sm:gap-6 mt-4"
-                variants={itemVariants}
-              >
-                <motion.button 
-                  className="bg-sky-400 hover:bg-sky-500 text-white px-4 sm:px-6 md:px-8 py-2 sm:py-3 rounded-full text-sm font-medium transition-colors shadow-md hover:shadow-lg"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  Book a trip now
-                </motion.button>
-                <motion.button 
-                  className="w-10 sm:w-12 md:w-14 h-10 sm:h-12 md:h-14 flex items-center justify-center bg-white rounded-full shadow-md hover:shadow-lg transition-all"
-                  whileHover={{ scale: 1.1, rotate: 5 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <Image 
-                    src="/play.svg" 
-                    alt="Play" 
-                    width={24} 
-                    height={24} 
-                    className="text-sky-500 w-5 h-5 sm:w-6 sm:h-6"
-                  />
-                </motion.button>
-              </motion.div>
-            </motion.div>
-        </div>
         <div className="hero-mobile relative w-full rounded-[50px] overflow-hidden bg-sky-50">
           {/* Background Image */}
           <motion.div 
@@ -226,7 +170,7 @@ const Hero: React.FC = () => {
                             whileTap={{ scale: 0.95 }}
                           >
                             <Image 
-                              src={`/destinations/destination${index}.svg`}
+                              src={`/destinations/img${index}.jpg`}
                               alt={`Destination ${index}`}
                               width={48} 
                               height={48}

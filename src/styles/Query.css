@@ -3,7 +3,6 @@
         position: absolute;
         
         top: 15px;
-        display: none;
         
         
     }
@@ -52,9 +51,14 @@
     .cm{
         display: flex;
     }
+    .airmobile{
+        
+        width: 450px;
+        display: none;
+        
+    }
 }
 @media (max-width: 1024px) {
-
     .iv{
         display: none;
     }
@@ -62,11 +66,36 @@
     .tab{
         display: flex;
         flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        padding: 0 1rem;
+    }
+
+    .tab > div:first-child {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .tab > div:last-child {
+        width: 100%;
+        text-align: center;
     }
 
     .fle{
         display: flex;
         flex-direction: column;
     }
-    
+
+    .amob{
+        width: 200px;
+    }
+
+    .amobb{
+        padding-left: 50px;
+    }
+
+    .cm {
+        margin-top: 1rem;
+        justify-content: center;
+    }
 }
