@@ -22,7 +22,7 @@ SkyWings is a modern, responsive flight booking platform built with Next.js and 
 
 [![Live Demo](https://img.shields.io/badge/Live_Demo-Visit_Site-brightgreen?style=for-the-badge&logo=vercel)](https://your-deployment-url.com)
 
-<img src="/public/cloud.jpg" alt="SkyWings Demo" width="600" />
+<img src="" alt="SkyWings Demo" width="600" />
 
 </div>
 
@@ -103,6 +103,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 <div align="center">
 
-Made with ❤️ by [Your Name](https://github.com/yourusername)
+Made with ❤️ by [prince nafis TOURE](https://github.com/nafis589)
 
 </div>
